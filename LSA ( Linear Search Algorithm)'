@@ -1,0 +1,31 @@
+import java.lang.module.FindException;
+
+public class LinearSearch {
+    public static void main(String[] args) {
+        int[] arr = {1, 5, 4, 6, 7, 88, 99,-1000};
+        int target = 5;
+        int res = linearsearch(arr, target);
+        System.out.println(res);
+
+    }
+    static int linearsearch (int[] arr, int target){
+
+        if(arr.length == 0){
+            return -1;
+        }
+        //enhanced for loop
+//        for (int element : arr) {
+//            if (element == target){
+//                return element;
+//            }
+            //or general for loop
+            for (int index = 0; index < arr.length; index++) {
+                int element = arr[index];
+                if(element == target){
+                    return index;
+                }
+
+            }return -1;
+//        }return -1;
+    }
+}
